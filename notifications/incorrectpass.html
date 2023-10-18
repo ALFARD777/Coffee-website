@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Успешная регистрация!</title>
+    <link rel="stylesheet" href="/Coffee/css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="popup red" id="popup">
+            <img src="/Coffee/image/cross.png">
+            <h2>Увы...</h2>
+            <p>Неверный логин или пароль!</p>
+            <button type="button" onclick="closePopup()">Назад</button>
+        </div>
+    </div>
+    <script>
+        function closePopup() {
+            window.location.href = "/Coffee/auth.html";
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("popup").classList.add("open-popup");
+        });
+    </script>
+</body>
+</html>
