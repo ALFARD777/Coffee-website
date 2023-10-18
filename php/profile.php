@@ -19,3 +19,4 @@ if (isset($_COOKIE['phone'])) {
         }
     }
 }
+mysqli_close($connection);

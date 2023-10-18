@@ -25,3 +25,4 @@ if ($result) {
 } else {
     header("Location: /Coffee/notifications/fail.html");
 }
+mysqli_close($connection);

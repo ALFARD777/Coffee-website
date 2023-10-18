@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/indexpopup.css">
 </head>
 
 <body>
@@ -29,12 +29,12 @@
         <a href="auth.html" class="btn hidden" id="authButton"><i class="fas fa-user"></i> Войти</a>
         <div class="content hidden inline" id="profile">
             <div>
-                <h3 id="userName">Имя</h3>
-                <h3 id="userPhone">Номер</h3>
+                <h3 id="userName" class="smallerlogo">Имя</h3>
+                <h3 id="userPhone" class="smallerlogo">Номер</h3>
             </div>
             <div style="margin-left: 20px;">
-                <a class="smallbtn btn">Корзина</a>
-                <a id="logoutButton" class="smallbtn btn">Выйти</a>
+                <a href="basket.html" class="smallbtn btn">Корзина</a>
+                <a id="logoutButton" class="smallbtn btn" style="margin-left: 5px;">Выйти</a>
             </div>
         </div>
     </header>
@@ -67,7 +67,7 @@
                 <h3 class="title">Что делает наш кофе таким особенным?</h3>
                 <p>Шунькофикс делает всё для того, чтоб вы получили по честной цене самый свежий и лучший кофе
                     в Минске. Вот почему мы считаем, что Шунькофикс – пожалуй, лучший кофе в Минске.</p>
-                <a href="#" class="btn">Узнать больше</a>
+                <button type="button" onclick="openAbout()" class="btn">Узнать больше</button>
                 <div class="icons-container">
                     <div class="icons">
                         <img src="image/about-icon-1.png" alt="">
@@ -89,56 +89,56 @@
         <h1 class="heading">Наше меню <span>Актуальные позиции</span></h1>
 
         <div class="box-container">
-            <a href="#" class="box">
+            <a onclick="openLatte()" class="box">
                 <img src="image/menu-1.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Латте</h3>
+                    <p>Молоко, эспрессо</p>
                     <span>4 BYN</span>
                 </div>
             </a>
 
-            <a href="#" class="box">
+            <a onclick="openEspresso()" class="box">
                 <img src="image/menu-2.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Эспрессо</h3>
+                    <p>Кофе и ничего больше</p>
                     <span>4 BYN</span>
                 </div>
             </a>
 
-            <a href="#" class="box">
+            <a onclick="openCapuccino()" class="box">
                 <img src="image/menu-3.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Капучино</h3>
+                    <p>Молоко, эспрессо</p>
                     <span>4 BYN</span>
                 </div>
             </a>
 
-            <a href="#" class="box">
+            <a onclick="openAmericano()" class="box">
                 <img src="image/menu-4.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Американо</h3>
+                    <p>Эспрессо, вода</p>
                     <span>4 BYN</span>
                 </div>
             </a>
 
-            <a href="#" class="box">
+            <a onclick="openRaf()" class="box">
                 <img src="image/menu-5.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Раф</h3>
+                    <p>Латте, но другое</p>
                     <span>4 BYN</span>
                 </div>
             </a>
 
-            <a href="#" class="box">
+            <a onclick="openChili()" class="box">
                 <img src="image/menu-6.png" alt="">
                 <div class="content">
-                    <h3>Кофе 1</h3>
-                    <p>Описание</p>
+                    <h3>Чили</h3>
+                    <p>Острый кофе</p>
                     <span>4 BYN</span>
                 </div>
             </a>
@@ -265,48 +265,84 @@
 
         <div class="credit"><span>Шунькофикс</span> © 2023 | все права защищены!</div>
     </section>
+    <div class="popupcontainer">
+        <div class="popup green" id="aboutpopup">
+            <h2>Про кофе</h2>
+            <p>Сейчас в сети очень много информации об арабике и робусте. В основном, это одни и те же данные о том,
+                каков размер зерна в сравнении одного вида с другим, где больше кофеина и на какой высоте произрастает
+                тот или иной вид. На самом деле, всё гораздо интереснее.<br><br>
+                Первое что нужно понять, так это то, что арабика и робуста не являются сортами кофе. Это виды кофейного
+                дерева. За что мы можем по-настоящему выразить свою признательность робусте, так это за то, что
+                благодаря ей, появилась на свет арабика. Робуста является её генетическим отцом. Благодаря естественному
+                скрещиванию робусты и эужениоидиса, на свет появилась арабика. Робуста крепче арабики (в среднем, 2%
+                кофеина против 1%), робуста не растет высоко в горах, а арабика не растет в жарких низинах. Арабика дает
+                меньший урожай, чем робуста, поэтому она дороже. Робуста дешвеле, потому что меньше, чем арабика,
+                подвержена болезням и насекомым-вредителям.<br><br>
+                Арабика – это самоопыляемое растение. Достаточно одного дерева, которое сможет давать плоды и
+                размножаться. Исходным сортом арабики является Типика, затем, в результате мутации на острове Бурбон
+                (ныне Реюньон) появился сорт Бурбон. Новые сорта арабики появляются благодаря мутациям, естественным
+                скрещиваниям (что случается редко) и путём селекции.<br><br>
+                Арабика начинает формировать свой вкус ещё на стадии произрастания. На формирование вкуса влияет
+                малейший фактор: состав почвы, температура окружающей среды, влажность воздуха, соседние деревья. Плоды
+                этого дерева созревают медленно, неспешно. В таких условиях в зерне кофейного плода формируются кислоты,
+                которые впоследствии влияют на формирование вкуса.<br><br>
+                Поэтому и важна высота над уровнем моря. Чем выше растёт дерево, тем ниже температура и медленнее
+                созревание плода. Сбор урожая происходит в два, три этапа, где в корзину попадают только зрелые плоды.
+                Это связано с тем, что на дереве нет однородного созревания ягод. После сбора, плоды подвергаются
+                обработке. При влажной (мытой) обработке, напиток будет обладать меньшей сладостью, большей
+                кислотностью, но при этом у него будет чистый вкус, с яркими нотами. При сухой (натуральной) обработке,
+                напиток будет более плотным, с выраженной сладостью и меньшей кислотностью.<br><br>
+                Во время обжарки, зерно раскрывает весь свой потенциал, который дала ему сама природа, сохраняя его
+                внутри себя. Когда мы приготовим такой кофе, будем приятно удивлены его богатством аромата и широчайшей
+                вкусовой палитрой. Вы сможете почувствовать нотки ягод, фруктов, шоколада, орехов, может даже
+                свежеиспечённого хлеба или пирога. Можно бесконечно перечислять то нереальное многообразие вкусов и
+                ароматов, которое дарит нам арабика.<br><br>
+                Вкус арабики будет зависеть от того, что в неё вложила сама природа, то, как обработали зерно, насколько
+                тонко и профессионально обжарщик сумел почувствовать его «характер» и сумел раскрыть самые яркие
+                свойства.</p>
+            <button type="button" onclick="closeAbout()">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="lattepopup">
+            <h2>Латте</h2>
+            <p>Состав: 350мл молока, 50мл эспрессо<br>Объем: 400мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Латте">Добавить в корзину</button>
+            <button type="button" onclick="closeLatte()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="espressopopup">
+            <h2>Эспрессо</h2>
+            <p>Состав: 50мл эспрессо<br>Объем: 50мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Эспрессо">Добавить в корзину</button>
+            <button type="button" onclick="closeEspresso()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="capuccinopopup">
+            <h2>Капучино</h2>
+            <p>Состав: 225мл молока, 75мл эспрессо<br>Объем: 300мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Капучино">Добавить в корзину</button>
+            <button type="button" onclick="closeCapuccino()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="americanopopup">
+            <h2>Американо</h2>
+            <p>Состав: 250мл молока, 50мл эспрессо<br>Объем: 300мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Американо">Добавить в корзину</button>
+            <button type="button" onclick="closeAmericano()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="rafpopup">
+            <h2>Раф</h2>
+            <p>Состав: 350мл молока, 75мл эспрессо<br>Объем: 325мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Раф">Добавить в корзину</button>
+            <button type="button" onclick="closeRaf()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+        <div class="popup dobig" id="chilipopup">
+            <h2>Чили</h2>
+            <p>Состав: 250мл вода, 50мл эспрессо, перчинка<br>Объем: 300мл<br><br>Цена: 4BYN</p>
+            <button type="button" onclick="" class="green" id="tobasket" data-text="Чили">Добавить в корзину</button>
+            <button type="button" onclick="closeChili()" style="margin-top: 5px;" class="red">Закрыть</button>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/auth.js"></script>
-    <script>
-        function updateUserName() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'php/profile.php', true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.name) {
-                        document.getElementById('userName').textContent = "Имя: " + response.name;
-                    }
-                }
-            };
-            xhr.send();
-        }
-        function checkAuthorization() {
-            var phoneCookie = getCookie("phone");
-            var profileMenu = document.getElementById("profile");
-            var profilePhone = document.getElementById("userPhone");
-            var authButton = document.getElementById("authButton");
-            if (phoneCookie) {
-                updateUserName();
-                phoneCookie = phoneCookie.replace("%2B", "+");
-                phoneCookie = phoneCookie.replace("%28", "(");
-                phoneCookie = phoneCookie.replace("%29", ")");
-                profilePhone.textContent = "Номер телефона: " + phoneCookie;
-                profileMenu.classList.remove("hidden");
-            } else {
-                authButton.classList.remove("hidden");
-            }
-        }
-        function getCookie(name) {
-            var value = "; " + document.cookie;
-            var parts = value.split("; " + name + "=");
-            if (parts.length === 2) {
-                return parts.pop().split(";").shift();
-            }
-        }
-        checkAuthorization();
-    </script>
 </body>
 
 </html>
