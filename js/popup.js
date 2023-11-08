@@ -97,8 +97,8 @@ function enableScroll() {
     window.scrollTo(-left, -top);
 }
 
-postButtons.forEach(function(button) {
-    var postButtons = document.getElementById("tobasket");
+var addToBasketButtons = document.querySelectorAll(".tobasket");
+addToBasketButtons.forEach(function(button) {
     button.addEventListener("click", function () {
         var buttonText = this.getAttribute("data-text");
         var xhr = new XMLHttpRequest();
@@ -107,7 +107,12 @@ postButtons.forEach(function(button) {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = xhr.responseText;
-                console.log(response);
+                if (response === "success") {
+                    window.location.href = "/Coffee/notifications/success.html";
+                }
+                else {
+                    window.location.href = "/Coffee/notifications/fail.html";
+                }
             }
         };
         var data = "positionName=" + buttonText;

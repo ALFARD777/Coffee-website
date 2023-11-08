@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/indexpopup.css">
+    <link rel="icon" href="image/favicon.ico">
 </head>
 
 <body>
@@ -43,6 +44,7 @@
             <div class="content">
                 <h3>Бодрящий кофе с утра</h3>
                 <a href="#menu" class="btn">Перейти к меню</a>
+                <a href="admin.html" class="btn hidden" style="margin-left: 5px;" id="adminButton">Панель администратора</a>
             </div>
             <div class="image">
                 <img src="image/home-img-1.png" class="main-home-image" alt="">
@@ -305,37 +307,37 @@
         <div class="popup dobig" id="lattepopup">
             <h2>Латте</h2>
             <p>Состав: 350мл молока, 50мл эспрессо<br>Объем: 400мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Латте">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Латте">Добавить в корзину</button>
             <button type="button" onclick="closeLatte()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
         <div class="popup dobig" id="espressopopup">
             <h2>Эспрессо</h2>
             <p>Состав: 50мл эспрессо<br>Объем: 50мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Эспрессо">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Эспрессо">Добавить в корзину</button>
             <button type="button" onclick="closeEspresso()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
         <div class="popup dobig" id="capuccinopopup">
             <h2>Капучино</h2>
             <p>Состав: 225мл молока, 75мл эспрессо<br>Объем: 300мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Капучино">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Капучино">Добавить в корзину</button>
             <button type="button" onclick="closeCapuccino()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
         <div class="popup dobig" id="americanopopup">
             <h2>Американо</h2>
             <p>Состав: 250мл молока, 50мл эспрессо<br>Объем: 300мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Американо">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Американо">Добавить в корзину</button>
             <button type="button" onclick="closeAmericano()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
         <div class="popup dobig" id="rafpopup">
             <h2>Раф</h2>
             <p>Состав: 350мл молока, 75мл эспрессо<br>Объем: 325мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Раф">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Раф">Добавить в корзину</button>
             <button type="button" onclick="closeRaf()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
         <div class="popup dobig" id="chilipopup">
             <h2>Чили</h2>
             <p>Состав: 250мл вода, 50мл эспрессо, перчинка<br>Объем: 300мл<br><br>Цена: 4BYN</p>
-            <button type="button" onclick="" class="green" id="tobasket" data-text="Чили">Добавить в корзину</button>
+            <button type="button" onclick="" class="green tobasket" data-text="Чили">Добавить в корзину</button>
             <button type="button" onclick="closeChili()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
     </div>

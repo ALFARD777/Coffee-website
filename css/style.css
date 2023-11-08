@@ -31,6 +31,10 @@ section {
     padding: 2rem 9%;
 }
 
+.center {
+    text-align: center;
+}
+
 .heading {
     font-size: 9rem;
     text-transform: uppercase;
@@ -94,6 +98,10 @@ section {
 
 .smallbtn {
     padding: .4rem 1.5rem !important;
+}
+
+.verysmallbtn {
+    padding: .3rem .4rem !important;
 }
 
 .btn:hover {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шунькофикс - Корзина</title>
+    <title>Шунькофикс - Панель администратора</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,23 +18,18 @@
         <div id="menu-btn" class="fas fa-bars"></div>
 
         <a href="index.html" class="logo">Шунькофикс <i class="fas fa-mug-hot"></i></a>
-        <div class="content hidden inline" id="profile">
-            <div>
-                <h3 id="userName" class="smallerlogo">Имя</h3>
-                <h3 id="userPhone" class="smallerlogo">Номер</h3>
-            </div>
-            <div style="margin-left: 20px;">
+        <div class="content inline" id="profile">
                 <a href="index.html" class="smallbtn btn">На главную</a>
-                <a id="logoutButton" class="smallbtn btn" style="margin-left: 5px;">Выйти из аккаунта</a>
-            </div>
         </div>
     </header>
     
     <section class="menu home" id="basket">
-        <a class="btn" onclick="basketUpdate()">Обновить</a>
+        <a class="btn" onclick="ordersUpdate()">Обновить</a>
+        <a class="btn" onclick="getNumberByID()" style="margin-left: 5px;">Данные по ID</a>
         <table id="paginatedTable">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Название</th>
                     <th>Количество</th>
                     <th>Цена</th>
@@ -53,8 +48,7 @@
         <button id="checkoutButton" class="btn hidden" onclick="doOrder()">Оформить заказ</button>
     </section>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/basket.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 
 </html>
