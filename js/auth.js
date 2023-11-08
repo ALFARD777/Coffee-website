@@ -12,7 +12,7 @@ function updateUserName() {
             var response = JSON.parse(xhr.responseText);
             if (response.name) {
                 document.getElementById('userName').textContent = "Имя: " + response.name;
-                if (response.isAdmin == 1 && window.location.href === "index.html") {
+                if (response.isAdmin == 1 && window.location.pathname === "/Coffee/index.html") {
                     document.getElementById('adminButton').classList.remove('hidden');
                 }
             }

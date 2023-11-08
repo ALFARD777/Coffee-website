@@ -530,6 +530,34 @@ section {
     border-bottom: var(--border-hover);
 }
 
+.alert {
+    padding: 20px;
+    color: white;
+    opacity: 1;
+    transition: opacity .6s;
+    margin-bottom: 15px;
+    position: fixed;
+}
+
+.alert.error {background-color: #f44336;}
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.close-btn {
+    margin-left: 15px;
+    color: white;
+    float: right !important;
+    font-size: 48px;
+    line-height: 20px;
+    cursor: pointer !important;
+    transition: .3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
 
 
 
