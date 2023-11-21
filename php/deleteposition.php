@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result) {
         echo "success";
     } else {
-        echo "fail";
+        echo $result;
     }
 }
 mysqli_close($connection);

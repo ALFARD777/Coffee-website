@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шунькофикс - Авторизация</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="index.html" class="logo">Шунькофикс <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+            <a href="register.html">Перейти к авторизации</a>
+        </nav>
+
+        <a href="index.html" class="btn"><i class="fas fa-door-open"></i> На главную</a>
+    </header>
+    <section class="auth menu home book" id="auth">
+        <h1 class="heading"><span>Восстановление пароля</span></h1>
+        <form action="php/restore.php" method="POST">
+            <input type="text" id="phone" name="phone" placeholder="+375(__)___-__-__" class="box">
+            <input type="password" name="password" placeholder="Новый пароль" class="box">
+            <input type="submit" value="Восстановить" class="btn">
+        </form>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/phoneInput.js"></script>
+</body>
+
+</html>

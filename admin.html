@@ -26,6 +26,8 @@
     <section class="menu home" id="basket">
         <a class="btn" onclick="ordersUpdate()">Обновить</a>
         <a class="btn" onclick="getNumberByID()" style="margin-left: 5px;">Данные по ID</a>
+        <a class="btn" onclick="getCallRequests('Active')" style="margin-left: 5px;">Свежие обратные звонки</a>
+        <a class="btn" onclick="getCallRequests('All')" style="margin-left: 5px;">Все обратные звонки</a>
         <table id="paginatedTable">
             <thead>
                 <tr>

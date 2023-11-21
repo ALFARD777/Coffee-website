@@ -163,9 +163,11 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Отзыв</p>
-                    <h3>Имя Фамилия</h3>
-                    <span>Постоянный клиент</span>
+                    <p>Отличная кофейня! Очень уютная, удобная по расположению - в центре города, с вполне
+                        демократичными ценами, хорошим кофе, мороженным и разными вкусностями.Эту кофейню нам
+                        рекомендовал наш гид, за что мы ему очень благодарны.</p>
+                    <h3>Евгений Мишин</h3>
+                    <span>Логистический аналитик</span>
                 </div>
 
                 <div class="swiper-slide box">
@@ -179,9 +181,11 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Отзыв</p>
-                    <h3>Имя Фамилия</h3>
-                    <span>Постоянный клиент</span>
+                    <p>Очаровательное атмосферное место. Прекрасное расположение — в центре города. Кофейня расположена
+                        в старинном здании, со следами прошедших лет, духом времени. Большой выбор кофе и чая, есть
+                        весьма оригинальные предложения. Хороший выбор.</p>
+                    <h3>Анфиса Белоусова</h3>
+                    <span>Операционный специалист</span>
                 </div>
 
                 <div class="swiper-slide box">
@@ -195,9 +199,11 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Отзыв</p>
-                    <h3>Имя Фамилия</h3>
-                    <span>Постоянный клиент</span>
+                    <p>Замечательное место. Очень уютно и атмоферно. Выгодное расположение в центре. Богатый выбор кофе
+                        - и оно здесь отменное! Продукт здесь один из лучших, которые я пробовал. Обязательно рекомендую
+                        родным и близким!</p>
+                    <h3>Василий Лобанов</h3>
+                    <span>Коммуникационный сотрудник</span>
                 </div>
 
                 <div class="swiper-slide box">
@@ -211,9 +217,11 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p>Отзыв</p>
-                    <h3>Телка</h3>
-                    <span>Постоянный клиент</span>
+                    <p>Прекрасный кофе, причём с самым богатым выбором вариантов этого напитка. Мне понравился и чили, и
+                        капучино, и эспрессо, стараюсь попробовать и другие. Приятное и довольно быстрое обслуживание,
+                        замечательная душевная атмосфера!</p>
+                    <h3>Валерия Блохина</h3>
+                    <span>Оптимизационный дизайнер</span>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -222,11 +230,11 @@
     <section class="book" id="book">
         <h1 class="heading">Звонок <span>Заказ обратного звонка</span></h1>
 
-        <form action="">
-            <input type="text" placeholder="Имя" class="box">
-            <input type="email" placeholder="Электронная почта" class="box">
-            <input type="phone" placeholder="Номер телефона" class="box">
-            <textarea type="text" name="additional" placeholder="Дополнительная информация" class="box" id="" cols="30"
+        <form action="php/requestcall.php" method="post">
+            <input type="text" placeholder="Имя" class="box" name="name" id="name">
+            <input type="email" placeholder="Электронная почта" class="box" name="email" id="email">
+            <input type="phone" placeholder="Номер телефона" class="box" name="phone" id="phone">
+            <textarea type="text" name="additional" id="additional" placeholder="Дополнительная информация" class="box" cols="30"
                 rows="10"></textarea>
             <input type="submit" value="Заказать звонок" class="btn">
         </form>
@@ -235,11 +243,11 @@
         <div class="box-container">
             <div class="box">
                 <h3>Наши филиалы</h3>
-                <a href="#"><i class="fas fa-arrow-right"></i> Адрес 1</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> Адрес 2</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> Адрес 3</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> Адрес 4</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> Адрес 5</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Минск, ул. Карла Маркса, 17</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Витебск, ул. Суворова, 2</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Гродно, ул. Мостовая, 31</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Брест, ул. Гоголя, 12</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Гомель, ул. Ленина, 24</a>
             </div>
 
             <div class="box">
@@ -253,23 +261,23 @@
 
             <div class="box">
                 <h3>Контакты</h3>
-                <a href="#"><i class="fas fa-phone"></i> Телефон 1</a>
-                <a href="#"><i class="fas fa-phone"></i> Телефон 2</a>
-                <a href="#"><i class="fas fa-envelope"></i> Эл. почта 1</a>
-                <a href="#"><i class="fas fa-envelope"></i> Эл. почта 2</a>
+                <a href="tel:375292506667"><i class="fas fa-phone"></i> +375 (29) 250-66-67</a>
+                <a href="tel:375296353935"><i class="fas fa-phone"></i> +375 (29) 635-39-35</a>
+                <a href="email:coffee@shunkofix.by"><i class="fas fa-envelope"></i> coffee@shunkofix.by</a>
+                <a href="email:staff@shunkofix.by"><i class="fas fa-envelope"></i> staff@shunkofix.by</a>
             </div>
 
             <div class="box">
                 <h3>Социальные сети</h3>
-                <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
-                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="https://t.me/ikkaqquk"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://instagram.com/ershunko"><i class="fab fa-instagram"></i> instagram</a>
             </div>
         </div>
 
         <div class="credit"><span>Шунькофикс</span> © 2023 | все права защищены!</div>
     </section>
     <div class="popupcontainer">
-        <div class="popup green" id="aboutpopup">
+        <div class="popup" id="aboutpopup">
             <h2>Про кофе</h2>
             <p>Сейчас в сети очень много информации об арабике и робусте. В основном, это одни и те же данные о том,
                 каков размер зерна в сравнении одного вида с другим, где больше кофеина и на какой высоте произрастает
@@ -342,18 +350,6 @@
             <button type="button" onclick="closeChili()" style="margin-top: 5px;" class="red">Закрыть</button>
         </div>
     </div>
-    <div class="alert info">
-        <span class="closebtn">&times;</span>
-        Alert box
-    </div>
-    <script>
-        //var close = document.getElementsByClassName("closebtn");
-        //for (var i = 0; i < close.length; i++) {
-        //    close[i].onclick = this.parentElement;
-        //    div.style.opacity = "0";
-        //    setTimeout(function () { div.style.display = 'none'; }, 600);
-       // }
-    </script>
     <script src="js/popup.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

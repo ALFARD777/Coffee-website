@@ -1,6 +1,3 @@
-import UIkit from "uikit";
-const { UIkit } = require("uikit");
-
 function closeAbout() {
     document.getElementById("aboutpopup").classList.remove("open-popup");
     document.body.style.position = '';
@@ -111,7 +108,7 @@ addToBasketButtons.forEach(function(button) {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var response = xhr.responseText;
                 if (response === "success") {
-                    UIkit.notification("123");
+                    window.location.href = "/Coffee/notifications/success.html";
                 }
                 else {
                     window.location.href = "/Coffee/notifications/fail.html";

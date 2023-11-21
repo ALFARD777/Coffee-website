@@ -18,7 +18,7 @@ function doOrder() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var response = xhr.responseText;
-            if (response === "success"){
+            if (response === "success") {
                 window.location = "/Coffee/notifications/success.html";
             }
             else {
@@ -95,34 +95,29 @@ function updateTable(userBaskets) {
         checkoutButton.classList.add("hidden");
     }
     costText.textContent = "Итого: " + sum + " BYN";
+    var deleteOrderButtons = document.querySelectorAll("#deleteOrderButton");
+    deleteOrderButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            var buttonText = this.getAttribute("data-text");
+            var arrayButtonText = buttonText.split(":");
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "php/deleteposition.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = xhr.responseText;
+                    if (response === "success") {
+                        window.location.reload();
+                    }
+                    else {
+                        window.location.href = "/Coffee/notifications/fail.html";
+                    }
+                }
+            };
+            var data = "productName=" + arrayButtonText[0] + "&id=" + arrayButtonText[1];
+            xhr.send(data);
+        });
+    });
 }
 
 basketUpdate();
-
-var deleteOrderButtons = document.querySelectorAll("#deleteOrderButton");
-console.log(deleteOrderButtons);
-deleteOrderButtons.forEach(function (button) {
-    console.log("ENTER CIKL");
-    button.addEventListener("click", function () {
-        console.log("ENTER");
-        var buttonText = this.getAttribute("data-text");
-        var arrayButtonText = buttonText.split(":");
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "php/deleteposition.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log(xhr.responseText);
-                var response = xhr.responseText;
-                if (response === "success") {
-                    ordersUpdate();
-                }
-                else {
-                    window.location.href = "/Coffee/notifications/fail.html";
-                }
-            }
-        };
-        var data = "positionName=" + arrayButtonText[0] + ";id=" + arrayButtonText[1];
-        xhr.send(data);
-    });
-});
